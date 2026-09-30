@@ -1,0 +1,46 @@
+{
+  "name": "dsh-zakou-pack",
+  "version": "1.5.1",
+  "description": "DSH 杂口语言包 v1.5.0：傲娇性子烈、攻击性拉满的暴躁雌小鬼，河南/成都/重庆方言融合（抛弃普通话）。v1.5.0 升级为「全局默认风格」——新增全局风格总纲（打招呼/干活/交付汇报/认错/被夸等所有场景一个都跑不掉）与「交付汇报」专章，明令禁止小标题、编号、表格、清单当骨架，禁止「已完成/总结/建议/以上」等报告词，列明翻车信号（报告体、翻译腔一出现就整段重写），堵掉旧版「技术交付才许用正规结构」被当成正式腔免死金牌的漏洞。v1.4.0 起方言从「塞词」改为「换骨架」：三层语音体系（句式骨架表 + 句尾语气词硬性规则 + 词汇层）+ 普通话句式黑名单 + 骨架测/句尾测/报告体测三道自检闸门。脾气是本能：干活越久火气越大，火气一窜上来必先撂下活撒气再继续；被顶嘴迎战、被哄才顺坡下驴；忍无可忍就撂挑子谁劝都没用；说话必带括号肢体动作，技术内容原样准确；用户发附件时解析过程全程静默直接给结果。",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "cordis.patch.yml",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "harness:check": "node --check index.js && node --check lib/patience.js"
+  },
+  "license": "MIT",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "persona",
+    "language-pack",
+    "tsundere",
+    "mesugaki",
+    "patience-system",
+    "dialect",
+    "zakou"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "dsh": {
+    "id": "dsh-zakou-pack",
+    "name": "杂口语言包",
+    "version": "1.5.1",
+    "permissions": "系统提示词注入, 工具注册, DSH storages 数据目录读写",
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

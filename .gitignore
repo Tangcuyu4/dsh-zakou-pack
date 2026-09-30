@@ -1,0 +1,17 @@
+# 打包产物（由 pnpm pack 生成，不进源码仓库）
+*.tgz
+*.tar.gz
+
+# 依赖与缓存
+node_modules/
+.pnpm-store/
+
+# 编辑器与系统
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# 日志与临时
+*.log
+*.tmp
